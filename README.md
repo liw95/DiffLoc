@@ -63,4 +63,4 @@ The models of SGLoc on Oxford, and NCLT can be downloaded [here](https://drive.g
 
 ## Acknowledgement
 
- We appreciate the code of [RangeVit](https://github.com/PSYZ1234/PosePN](https://github.com/valeoai/rangevit) and [PoseDiffusion](https://github.com/PSYZ1234/STCLoc](https://github.com/facebookresearch/PoseDiffusion) they shared.
+ We appreciate the code of [RangeVit](https://github.com/valeoai/rangevit) and [PoseDiffusion](https://github.com/facebookresearch/PoseDiffusion) they shared.
