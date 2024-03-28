@@ -1,0 +1,125 @@
+ckpt: 'log/nclt.pth'
+seed: 7
+exp_name: 'NCLT'
+exp_dir: 'log'
+sampling_timesteps: 15
+
+train:
+    batch_size: 28
+    val_batch_size: 28
+    image_size: [32, 512]
+    original_image_size: [32, 512]
+    steps: 3
+    skip: 2
+    restart_num: 5
+    lr: 5e-4
+    weight_decay: 0.01
+    epochs: 151
+    ckpt_interval: 1
+    num_workers: 16
+    eval_interval: 5
+    print_interval: 200
+    persistent_workers: True
+
+    pin_memory: True
+    clip_grad: 1.0
+
+    cudnnbenchmark: True
+
+    warmup_sche: True
+    dataset: 'NCLT'
+    dataroot: '/ava16t/lw/Data'
+
+profile: False
+
+
+MODEL:
+    _target_: models.DiffusionLocModel
+
+    IMAGE_FEATURE_EXTRACTOR: 
+        _target_:               models.image_feature_extractor.ImageFeatureExtractor
+        backbone:              "vit_small_patch16_384"
+        freeze:                 False
+        in_channels:            5
+        new_patch_size:         [4, 16]
+        new_patch_stride:       [4, 16]
+        conv_stem:              'ConvStem'  # 'none' or 'ConvStem'
+        stem_base_channels:     32
+        D_h:                    256         # hidden dimension of the stem
+        image_size:             [32, 512]
+        decoder:                'linear'
+        pretrained_path:        "dinov2_vits14_pretrain.pth"
+        reuse_pos_emb:          true
+        reuse_patch_emb:        false # no patch embedding as a convolutional stem (ConvStem) is used
+        n_cls:                  1
+
+    DENOISER: 
+        _target_: models.Denoiser
+        TRANSFORMER:
+            _target_:               models.denoiser.TransformerEncoderWrapper
+            d_model:                512
+            nhead:                  4
+            num_encoder_layers:     8
+            dim_feedforward:        1024
+            dropout:                0.1
+            batch_first:            True
+            norm_first:             True
+
+
+    DIFFUSER:
+        _target_: models.GaussianDiffusion
+        beta_schedule: custom
+
+
+sensors:
+    name: 'NCLT32E'
+    type: 'spherical'
+    proj_h: 32
+    proj_w: 512
+    fov_up: 30.
+    fov_down: -10.
+    fov_left: -180
+    fov_right: 180
+    image_mean:
+        - 7.60
+        - 0.55
+        - -0.02
+        - 1.33
+        - 11.24
+        - 0
+
+    image_stds:
+         - 5.38
+         - 6.22
+         - 6.43
+         - 1.49
+         - 23.35
+         - 1
+
+# Data augmentation config
+augmentation:
+  # flip
+  p_flipx: 0.
+  p_flipy: 0.5
+
+  # translation
+  p_transx: 0.5
+  trans_xmin: -5
+  trans_xmax: 5
+  p_transy: 0.5
+  trans_ymin: -3
+  trans_ymax: 3
+  p_transz: 0.5
+  trans_zmin: -1
+  trans_zmax: 0.
+
+  # rotation
+  p_rot_roll: 0.5
+  rot_rollmin: -5
+  rot_rollmax: 5
+  p_rot_pitch: 0.5
+  rot_pitchmin: -5
+  rot_pitchmax: 5
+  p_rot_yaw: 0.5
+  rot_yawmin: -45
+  rot_yawmax: 45
