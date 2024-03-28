@@ -59,7 +59,7 @@ python test.py
 
 ## Model zoo
 
-The models of SGLoc on Oxford, and NCLT can be downloaded [here](https://drive.google.com/drive/folders/17uhEqc7BYqLETecllyLMorI0lOI9hBiQ).
+The models of DiffLoc on Oxford, and NCLT can be downloaded [here](https://drive.google.com/drive/folders/17uhEqc7BYqLETecllyLMorI0lOI9hBiQ).
 
 ## Acknowledgement
 
