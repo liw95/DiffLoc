@@ -4,7 +4,7 @@ DiffLoc: DiffLoc: Diffusion Model for Outdoor LiDAR Localization
 ![image](img/DiffLoc.jpg)
 
 ## Visualization
-![image](img/Visualization results.jpg)
+![image](img/Results.jpg)
 
 # Environment
 
@@ -36,7 +36,7 @@ data_root
 
 ## Data prepare
 
-- NCLT: We use [NCLT Sample Python Scripts] (https://robots.engin.umich.edu/nclt/) to preprocess velodyne_sync to speed up data reading. We provided within it [preprocess/nclt_precess.py].
+- NCLT: We use [NCLT Sample Python Scripts](https://robots.engin.umich.edu/nclt/) to preprocess velodyne_sync to speed up data reading. We provided within it [nclt_precess.py][preprocess/nclt_precess.py].
 
 - Oxford&NCLT: We use [SPVNAS](https://github.com/mit-han-lab/spvnas) to generate static object masks to train the SOAP module. You need to download the code for SPVNAS and run the [data_prepare.py](preprocess/data_prepare.py).
 
@@ -59,8 +59,7 @@ python test.py
 
 ## Model zoo
 
-The models of SGLoc on Oxford, and NCLT can be downloaded [here]
-(https://drive.google.com/drive/folders/17uhEqc7BYqLETecllyLMorI0lOI9hBiQ).
+The models of SGLoc on Oxford, and NCLT can be downloaded [here](https://drive.google.com/drive/folders/17uhEqc7BYqLETecllyLMorI0lOI9hBiQ).
 
 ## Acknowledgement
 
