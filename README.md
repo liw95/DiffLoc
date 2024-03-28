@@ -44,7 +44,7 @@ data_root
 ## Run
 
 ### Download the pretrained ViT model
-We initialize DiffLoc's feature learner backbone with DINOv2. You can download [ViT-S/14 distilled](https://github.com/facebookresearch/dinov2?tab=readme-ov-file).
+We initialize DiffLoc's feature learner with [DINOv2](https://github.com/facebookresearch/dinov2?tab=readme-ov-file).
 
 ### Train
 
