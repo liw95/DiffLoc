@@ -1,7 +1,7 @@
 # DiffLoc
 DiffLoc: DiffLoc: Diffusion Model for Outdoor LiDAR Localization
 
-![image](img/DiffLoc.jpg)
+<img src="https://github.com/liw95/DiffLoc/img/DiffLoc.png" width=400>
 
 ## Visualization
 ![image](img/Results.jpg)
