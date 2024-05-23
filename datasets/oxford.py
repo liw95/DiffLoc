@@ -167,7 +167,7 @@ class Oxford(data.Dataset):
         else:
             #fill with zeros
             pointcloud = np.fromfile(scan_path, dtype=np.float32).reshape(4, -1).transpose()
-            pointcloud = np.concatenate((pointcloud, np.zeros(len(pointcloud, 1))), axis=1)
+            pointcloud = np.concatenate((pointcloud, np.zeros(len(pointcloud), 1)), axis=1)
         # flip z
         T = euler_to_so3([np.pi, 0, np.pi / 2])
         pointcloud[:, :3] = (T[:3, :3] @ pointcloud[:, :3].transpose()).transpose()
