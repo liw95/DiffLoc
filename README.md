@@ -64,3 +64,15 @@ The models of DiffLoc on Oxford, and NCLT can be downloaded [here](https://drive
 ## Acknowledgement
 
  We appreciate the code of [RangeVit](https://github.com/valeoai/rangevit) and [PoseDiffusion](https://github.com/facebookresearch/PoseDiffusion) they shared.
+
+## Citation
+
+```
+@inproceedings{li2024diffloc,
+  title={DiffLoc: Diffusion Model for Outdoor LiDAR Localization},
+  author={Li, Wen and Yang, Yuyang and Yu, Shangshu and Hu, Guosheng and Wen, Chenglu and Cheng, Ming and Wang, Cheng},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={15045--15054},
+  year={2024}
+}
+```
