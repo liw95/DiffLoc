@@ -1,5 +1,6 @@
 # DiffLoc
 DiffLoc: Diffusion Model for Outdoor LiDAR Localization
+
 [Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_DiffLoc_Diffusion_Model_for_Outdoor_LiDAR_Localization_CVPR_2024_paper.pdf) 
 [Poster](https://drive.google.com/file/d/1P80GGOAyWRF5BICAQ990PDO0iByW2kbP/view)
 [Video](https://www.youtube.com/watch?v=sSW9nHQR0nc&t=31s)
@@ -24,7 +25,7 @@ source install.sh
 
 We support the [Oxford Radar RobotCar](https://oxford-robotics-institute.github.io/radar-robotcar-dataset/datasets) and [NCLT](https://robots.engin.umich.edu/nclt/) datasets right now.
 
-The data of the Oxford and NCLT dataset should be organized as follows:
+The data of the Oxford and NCLT datasets should be organized as follows:
 
 ```
 data_root
@@ -42,11 +43,12 @@ data_root
 
 - Oxford&NCLT: We use [SPVNAS](https://github.com/mit-han-lab/spvnas) to generate static object masks to train the SOAP module. You need to download the code for SPVNAS and run the [data_prepare.py](preprocess/data_prepare.py).
 
+**Note:** We notice the pre-trained weights for the segmentation model are no longer available for download. A backup is provided on my Google Drive [Code](https://drive.google.com/file/d/1jtDClM-6EnW329FtJ0WXVBopOTuVRXJG/view?usp=sharing). Please follow the installation instructions on [Docs]([insert link](https://github.com/PJLab-ADG/OpenPCSeg/blob/master/docs/INSTALL.md)) to set up the necessary libraries. If you use the model, please cite the corresponding paper [SPVNAS](https://github.com/mit-han-lab/spvnas).
 
 ## Run
 
 ### Download the pretrained ViT model
-We initialize DiffLoc's feature learner with [DINOv2](https://github.com/facebookresearch/dinov2?tab=readme-ov-file).
+We initialize DiffLoc's feature learner using the [DINOv2](https://github.com/facebookresearch/dinov2?tab=readme-ov-file).
 
 ### Train
 
@@ -65,7 +67,7 @@ The models of DiffLoc on Oxford, and NCLT can be downloaded [here](https://drive
 
 ## Acknowledgement
 
- We appreciate the code of [RangeVit](https://github.com/valeoai/rangevit) and [PoseDiffusion](https://github.com/facebookresearch/PoseDiffusion) they shared.
+ We would like to express our gratitude for the code shared by [RangeVit](https://github.com/valeoai/rangevit) and [PoseDiffusion](https://github.com/facebookresearch/PoseDiffusion).
 
 ## Citation
 
@@ -76,5 +78,13 @@ The models of DiffLoc on Oxford, and NCLT can be downloaded [here](https://drive
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   pages={15045--15054},
   year={2024}
+}
+
+@inproceedings{li2023sgloc,
+  title={SGLoc: Scene Geometry Encoding for Outdoor LiDAR Localization},
+  author={Li, Wen and Yu, Shangshu and Wang, Cheng and Hu, Guosheng and Shen, Siqi and Wen, Chenglu},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9286--9295},
+  year={2023}
 }
 ```
