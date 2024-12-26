@@ -44,7 +44,7 @@ data_root
 
 - Oxford&NCLT: We use [SPVNAS](https://github.com/mit-han-lab/spvnas) to generate static object masks to train the SOAP module. You need to download the code for SPVNAS and run the [data_prepare.py](preprocess/data_prepare.py).
 
-**Note:** We notice the pre-trained weights for the segmentation model are no longer available for download. A backup is provided on my [Google Drive](https://drive.google.com/file/d/1jtDClM-6EnW329FtJ0WXVBopOTuVRXJG/view?usp=sharing). Please follow the installation instructions on [Docs](https://github.com/PJLab-ADG/OpenPCSeg/blob/master/docs/INSTALL.md)) to set up the necessary libraries. If you use the model, please cite the corresponding [paper](https://github.com/mit-han-lab/spvnas).
+**Note:** We notice the pre-trained weights for the segmentation model are no longer available for download. A backup is provided on my [Google Drive](https://drive.google.com/file/d/1jtDClM-6EnW329FtJ0WXVBopOTuVRXJG/view?usp=sharing). Please follow the installation instructions on [Docs](https://github.com/PJLab-ADG/OpenPCSeg/blob/master/docs/INSTALL.md) to install the necessary libraries. If you use the model, please cite the [corresponding paper](https://github.com/mit-han-lab/spvnas).
 
 ## Run
 
