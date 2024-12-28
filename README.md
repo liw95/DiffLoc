@@ -2,7 +2,7 @@
 DiffLoc: Diffusion Model for Outdoor LiDAR Localization
 
 [Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_DiffLoc_Diffusion_Model_for_Outdoor_LiDAR_Localization_CVPR_2024_paper.pdf) 
-[Supplementary](https://openaccess.thecvf.com/content/CVPR2024/supplemental/Li_DiffLoc_Diffusion_Model_CVPR_2024_supplemental.pdf)
+[Supp](https://openaccess.thecvf.com/content/CVPR2024/supplemental/Li_DiffLoc_Diffusion_Model_CVPR_2024_supplemental.pdf)
 [Poster](https://drive.google.com/file/d/1P80GGOAyWRF5BICAQ990PDO0iByW2kbP/view)
 [Video](https://www.youtube.com/watch?v=sSW9nHQR0nc&t=31s)
 
